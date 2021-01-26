@@ -1,0 +1,7 @@
+{
+  "name": "travel-bucket",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
