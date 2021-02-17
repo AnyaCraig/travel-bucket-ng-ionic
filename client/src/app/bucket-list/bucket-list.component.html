@@ -1,0 +1,8 @@
+<div class="bucket-list-wrapper">
+  <strong>Bucket List</strong>
+  <ul class="plain-ul">
+    <li class="plain-li" *ngFor="let bucketItem of bucketList$ | async">
+      <bucket-item [place]="bucketItem"></bucket-item>
+    </li>
+  </ul>
+</div>

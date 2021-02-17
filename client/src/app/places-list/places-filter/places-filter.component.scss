@@ -1,0 +1,30 @@
+ion-list,
+ion-item {
+  --ion-background-color: var(--light-color);
+}
+
+ion-list {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0;
+  // background-color: red;
+}
+
+ion-item {
+  border-bottom: 1px solid var(--accent-light-color);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.filter-label {
+  font-family: "Barlow", sans-serif;
+}
+
+ion-checkbox {
+  --checkmark-color: var(--light-color);
+  --background-checked: var(--dark-color);
+  --border-color: var(--dark-color);
+  --border-color-checked: var(--dark-color);
+}

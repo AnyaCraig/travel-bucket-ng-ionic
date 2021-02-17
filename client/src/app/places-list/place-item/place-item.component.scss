@@ -1,0 +1,72 @@
+$box-padding-outer: 20px;
+$box-padding-inner: 15px;
+$box-border-radius: 5px;
+
+.box-wrapper {
+  position: relative;
+  background-color: var(--light-color);
+  border-radius: $box-border-radius;
+}
+
+.bucket-button {
+  border-radius: $box-border-radius;
+  max-width: 250px;
+  --box-shadow: none;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: 0.2s;
+
+  &:hover {
+    --background-color: red;
+  }
+}
+
+.place-name {
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  padding-right: 75px;
+  background-color: var(--dark);
+  padding: $box-padding-outer $box-padding-outer $box-padding-inner
+    $box-padding-outer;
+  border-top-left-radius: $box-border-radius;
+  border-top-right-radius: $box-border-radius;
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: var(--light-color);
+  }
+}
+
+.place-details {
+  padding: $box-padding-inner $box-padding-outer $box-padding-outer
+    $box-padding-outer;
+}
+
+ul {
+  margin-bottom: 25px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+ion-icon {
+  --ionicon-stroke-width: 50px;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 30px;
+  color: var(--accent-comp);
+  cursor: pointer;
+  z-index: 100;
+  // --ionicon-stroke-width: 5;
+}
+.emphasis {
+  font-weight: 700;
+}

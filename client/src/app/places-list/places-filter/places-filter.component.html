@@ -1,0 +1,9 @@
+<div class="filter-wrapper">
+  <ion-list lines="none" class="filter-list">
+    <ion-item *ngFor="let region of regionFilters$ | async">
+      <ion-label class="filter-label">{{region.regionName | titlecase}}</ion-label>
+      <!-- <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox> -->
+      <ion-checkbox class="filter-checkbox" color="red" slot="end" [checked]="region.isChecked" (ionChange)="handleCheckboxClick(region.regionName)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</div>

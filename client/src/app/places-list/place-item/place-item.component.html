@@ -1,0 +1,19 @@
+<div [ngClass]="{'box-wrapper': true, 'is-in-bucket': place.isInBucket}">
+  <div class="place-name">
+    <p>{{ place.name }}</p>
+  </div>
+  <div class="place-details">
+    <ul>
+      <li><span class="emphasis">Population: </span>{{ place.population | number}}</li>
+      <li><span class="emphasis">Capital: </span>{{ place.capital | titlecase }}</li>
+      <li><span class="emphasis">Region: </span>{{ place.region | titlecase }}</li>
+      <li><span class="emphasis">Subregion: </span>{{ place.subregion | titlecase }}</li>
+    </ul>
+    <ion-button class="bucket-button" [color]="place.isInBucket ? 'cta-2' : 'cta-1'" (click)="handleAddOrRemoveClick()">{{ place.isInBucket ? "Remove from my bucket" : "Add to my bucket" }}</ion-button>
+  </div>
+  <ion-icon 
+    class="heart-icon" 
+    [name]="place.isInBucket ? 'heart' : 'heart-outline'"
+    (click)="handleAddOrRemoveClick()">
+  </ion-icon>
+</div>

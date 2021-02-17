@@ -1,0 +1,26 @@
+<div id="places-list">
+  <div>
+    <accordion accordionTitle="Filter by region">
+      <places-filter></places-filter>
+    </accordion>
+    
+  </div>
+  <div class="error-container" *ngIf="errorFetching$ | async">
+    ERROR FETCHING!
+  </div>
+
+  <div class="spinner-container" *ngIf="isFetching$ | async">
+    <ion-spinner class="places-spinner" name="bubbles" color="cta-2"></ion-spinner>
+  </div>
+
+  <div *ngIf="(placesList$ | async).length" class="list">
+    <ul class="plain-ul">
+      <li class="plain-li" *ngFor="let place of placesList$ | async">
+        <place-item [place]="place"></place-item>
+      </li>
+    </ul>
+    <ng-container *ngIf="hasMoreCountries$ | async">
+      <ion-button *ngIf="countryCursor$ | async as cursor" (click)="getCountries(cursor)" class="fetch-more-button" [color]="'cta-2'">get more countries</ion-button>
+    </ng-container>
+  </div>
+</div>

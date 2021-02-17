@@ -1,0 +1,140 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+@import "./theme/variables.scss";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Merriweather:wght@400;700&display=swap");
+
+:root {
+  --ion-color-cta-1: var(--accent-mono);
+  --ion-color-cta-2: var(--accent-comp);
+  --background-color: var(--background);
+  --accent-mono-color: var(--accent-mono);
+  --accent-comp-color: var(--accent-comp);
+  --accent-light-color: var(--accent-light);
+  --accent-dark-color: var(--accent-dark);
+  --light-color: var(--light);
+  --dark-color: var(--dark);
+
+  --ion-color-spinner-color: var(--accent-comp);
+  --ion-tabbar-text-color-active: hotpink;
+  // --ion-color-favorite-contrast: #ffffff;
+  // --ion-color-favorite-contrast-rgb: 255,255,255;
+  // --ion-color-favorite-shade: #5ca56c;
+  // --ion-color-favorite-tint: #78c288;
+}
+
+.ion-color-cta-1 {
+  --ion-color-base: var(--ion-color-cta-1);
+  // --ion-color-base-rgb: var(--ion-color-favorite-rgb);
+  // --ion-color-contrast: var(--ion-color-favorite-contrast);
+  // --ion-color-contrast-rgb: var(--ion-color-favorite-contrast-rgb);
+  // --ion-color-shade: var(--ion-color-favorite-shade);
+  // --ion-color-tint: var(--ion-color-favorite-tint);
+}
+
+.ion-color-cta-2 {
+  --ion-color-base: var(--ion-color-cta-2);
+}
+
+.ion-color-spinner-color {
+  --ion-color-base: var(--ion-color-spinner-color);
+}
+
+ion-content {
+  --ion-background-color: var(--background-color);
+}
+
+ion-toolbar {
+  --ion-background-color: var(--dark-color);
+  box-shadow: none;
+  color: var(--light-color);
+  border-bottom: 4px solid var(--accent-dark-color);
+}
+
+html,
+body,
+p,
+span,
+li,
+a,
+button,
+ion-button,
+label,
+ion-label,
+ion-item {
+  font-family: "Barlow", sans-serif;
+}
+
+ion-button {
+  font-weight: 600;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ion-tab-bar,
+ion-tab-button {
+  background-color: var(--dark-color);
+}
+
+ion-tab-bar {
+  border-top: 4px solid var(--accent-dark-color);
+
+  ion-label {
+    color: var(--light-color);
+  }
+}
+
+ion-icon {
+  color: var(--light-color);
+}
+
+ion-tab-button {
+  --color: var(--accent-comp-color);
+  --color-selected: var(--accent-light-color);
+
+  // &::before {
+  //   background-color: transparent;
+  //   display: block;
+  //   content: "";
+  //   margin: 0 auto;
+  //   width: 30px;
+  //   height: 4px;
+  // }
+
+  // &.tab-selected::before {
+  //   background-color: var(--accent-comp-color);
+  // }
+}

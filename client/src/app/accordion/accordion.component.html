@@ -1,0 +1,13 @@
+<div class="accordion-wrapper">
+  <div class="accordion-header" [ngClass]="{'is-open': isOpen}" (click)="toggleOpenState()">
+    <ion-icon 
+    class="toggle-icon" 
+    [name]="this.isOpen ? 'remove-circle' : 'add-circle'"
+    >
+  </ion-icon>
+    <p class="accordion-title">{{ accordionTitle }}</p>
+  </div>
+  <div *ngIf="isOpen">
+    <ng-content></ng-content>
+  </div>
+</div>
