@@ -138,3 +138,155 @@ ion-tab-button {
   //   background-color: var(--accent-comp-color);
   // }
 }
+
+.ion-select-custom-interface {
+  .action-sheet-title {
+    font-weight: bold;
+    color: black;
+    border-bottom: 1px solid lightgrey;
+  }
+}
+
+// IOS
+.ios {
+  .ion-select-custom-interface {
+    .action-sheet-title {
+      text-align: left;
+      padding: 15px;
+      font-size: 16px;
+    }
+
+    .action-sheet-container {
+      padding-inline-start: 20px;
+      padding-inline-end: 20px;
+    }
+
+    .action-sheet-group.sc-ion-action-sheet-ios:first-child {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .action-sheet-button-inner {
+      font-size: 16px;
+    }
+
+    .action-sheet-button.ion-activated {
+      &:after {
+        background: rgb(68, 66, 66);
+      }
+      .action-sheet-button-inner {
+        color: black;
+      }
+    }
+
+    .action-sheet-container {
+      padding-bottom: 20px;
+    }
+    .action-sheet-group {
+      border-radius: 5px;
+    }
+
+    .action-sheet-group-cancel {
+      border-radius: 30px;
+      width: 75%;
+      align-self: center;
+
+      button:after {
+        background-color: rgb(54, 107, 175);
+      }
+
+      .action-sheet-button-inner {
+        justify-content: center;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+
+    .select-interface-option {
+      height: auto;
+      min-height: 52px;
+      text-align: left;
+      contain: content;
+      color: black;
+
+      .alert-radio-label,
+      .alert-radio-label.sc-ion-alert-ios {
+        white-space: pre-line !important;
+      }
+
+      .action-sheet-button-inner {
+        justify-content: flex-start;
+      }
+
+      ion-label.sc-ion-select-popover {
+        white-space: pre-line !important;
+        padding: 10px 0;
+      }
+    }
+    button.select-interface-option.action-sheet-button {
+      border-bottom: 1px solid lightgray;
+      padding: 10px 15px;
+    }
+  }
+}
+
+// ANDROID ONLY
+.md {
+  .ion-select-custom-interface {
+    .action-sheet-button.ion-activated {
+      &:after {
+        background: rgb(68, 66, 66);
+      }
+      .action-sheet-button-inner {
+        color: black;
+      }
+    }
+    .action-sheet-group-cancel {
+      background-color: rgb(27, 133, 168);
+      .action-sheet-button-inner {
+        color: rgb(21, 82, 196);
+        color: white;
+      }
+    }
+  }
+}
+
+// COMMON
+.ion-select-custom-interface {
+  .select-interface-option {
+    height: auto;
+    min-height: 52px;
+    text-align: left;
+    contain: content;
+    color: black;
+
+    .alert-radio-label,
+    .alert-radio-label.sc-ion-alert-ios {
+      white-space: pre-line !important;
+    }
+
+    .action-sheet-button-inner {
+      justify-content: flex-start;
+    }
+
+    ion-label.sc-ion-select-popover {
+      white-space: pre-line !important;
+      padding: 10px 0;
+    }
+  }
+  button.select-interface-option.action-sheet-button {
+    border-bottom: 1px solid lightgray;
+    padding: 10px 15px;
+  }
+}
+
+select {
+  max-width: 100%;
+
+  option {
+    height: auto;
+    white-space: wrap;
+  }
+}

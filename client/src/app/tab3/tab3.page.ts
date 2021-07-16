@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  constructor() { }
+
+  options = {
+    cssClass: 'ion-select-custom-interface',
+    header: 'Choose a location'
+  };
+
+  description: string = "<h1>My Header</h1> more text <br> and a break"
 
 }

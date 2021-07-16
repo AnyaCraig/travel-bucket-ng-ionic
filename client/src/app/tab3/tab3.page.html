@@ -9,9 +9,94 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">GAAAH!</ion-title>
+      <ion-title size="large">Select/Dropdown Options</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <p>Nothing to see here yet!</p>
+  <ion-item>
+    <select>
+      <option>Golden Lake</option>
+      <option>Deacon but with a much longer name to test how the native select handles long option text on small screens
+      </option>
+      <option>Another long option that is slightly shorter than the last option and here is even more</option>
+      <option>Clontarf</option>
+      <option>Newfoundout</option>
+      <option>Renfrew</option>
+      <option>Bonnechere</option>
+      <option>Wilno</option>
+    </select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Alert Select
+    </ion-label>
+    <ion-select [interfaceOptions]="options">
+      <ion-select-option>Golden Lake</ion-select-option>
+      <ion-select-option>Pelee Island</ion-select-option>
+      <ion-select-option>Germanicus but with a much longer name to test the action sheet's ability to display long
+        option text</ion-select-option>
+      <ion-select-option>Middle Island</ion-select-option>
+      <ion-select-option>Dacre</ion-select-option>
+      <ion-select-option>Killaloe</ion-select-option>
+      <ion-select-option>East Sister Island</ion-select-option>
+      <ion-select-option>Lake Dore</ion-select-option>
+      <ion-select-option>Mount St.Patrick</ion-select-option>
+      <ion-select-option>Clontarf</ion-select-option>
+      <ion-select-option>Pembroke, Petawawa, Chalk River, Deep River, Arnprior</ion-select-option>
+      <ion-select-option>Renfrew</ion-select-option>
+      <ion-select-option>Balaclava</ion-select-option>
+      <ion-select-option>Newfoundout</ion-select-option>
+      <ion-select-option>Sebastopol</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Action Sheet Select
+    </ion-label>
+    <ion-select interface="action-sheet" [interfaceOptions]="options" [placeholder]="'Choose a location'">
+      <ion-select-option>Golden Lake 🤑</ion-select-option>
+      <ion-select-option>Pelee Island</ion-select-option>
+      <ion-select-option>
+        Esmonde but with a much longer name to test the action sheet's ability to display long option text and here is
+        even longer text in case we want to test that because on Android, the text is quite small, don't you think?
+      </ion-select-option>
+      <ion-select-option>Middle Big Island</ion-select-option>
+      <ion-select-option>Dacre</ion-select-option>
+      <ion-select-option>East Sister Island</ion-select-option>
+      <ion-select-option>Lake Dore</ion-select-option>
+      <ion-select-option>Mount St.Patrick</ion-select-option>
+      <ion-select-option>Clontarf</ion-select-option>
+      <ion-select-option>Pembroke, Petawawa, Chalk River, Deep River, Arnprior</ion-select-option>
+      <ion-select-option>Renfrew</ion-select-option>
+      <ion-select-option>Balaclava</ion-select-option>
+      <ion-select-option>Newfoundout</ion-select-option>
+      <ion-select-option>Sebastopol</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Popover Select
+    </ion-label>
+    <ion-select interface="popover" [interfaceOptions]="options">
+      <ion-select-option>Golden Lake</ion-select-option>
+      <ion-select-option>Pelee Island</ion-select-option>
+      <ion-select-option><span class="newline">Esmonde but with a much longer name </span><span class="newline">to test
+          the action sheet's ability to display long option text</span></ion-select-option>
+      <ion-select-option>Middle Island</ion-select-option>
+      <ion-select-option>Dacre</ion-select-option>
+      <ion-select-option>East Sister Island</ion-select-option>
+      <ion-select-option>Lake Dore</ion-select-option>
+      <ion-select-option>Mount St.Patrick</ion-select-option>
+      <ion-select-option>Clontarf</ion-select-option>
+      <ion-select-option>Pembroke, Petawawa, Chalk River, Deep River, Arnprior</ion-select-option>
+      <ion-select-option>Renfrew</ion-select-option>
+      <ion-select-option>Balaclava</ion-select-option>
+      <ion-select-option>Newfoundout</ion-select-option>
+      <ion-select-option>Sebastopol</ion-select-option>
+    </ion-select>
+  </ion-item>
+
 </ion-content>
